@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кофейня «Утро»</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Golos+Text:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF6E9;--ink:#2B1A10;--acc:#E8742A;--soft:#F3E2CB}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Golos Text",system-ui,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:28px 6vw}
+.logo{font-family:Unbounded,sans-serif;font-weight:800;font-size:22px}
+.logo b{color:var(--acc)}
+nav a{margin-left:28px;color:var(--ink);text-decoration:none;font-weight:600}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:4vw;align-items:center;padding:4vh 6vw 8vh}
+h1{font-family:Unbounded,sans-serif;font-weight:800;font-size:clamp(40px,6vw,84px);line-height:1.02;letter-spacing:-.02em}
+h1 span{color:var(--acc)}
+.lead{font-size:20px;line-height:1.5;margin:26px 0 34px;max-width:30ch;opacity:.8}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);padding:18px 30px;border-radius:999px;font-weight:600;text-decoration:none}
+.cup{aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 45%,#6B3B1F 0 38%,#F8EBDD 39% 46%,var(--acc) 47% 100%);position:relative;box-shadow:0 40px 80px rgba(120,60,20,.25)}
+.cup:after{content:"☕";position:absolute;right:6%;bottom:6%;font-size:64px}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:0 6vw 10vh}
+.card{background:var(--soft);border-radius:26px;padding:28px}
+.card h3{font-family:Unbounded,sans-serif;font-size:22px;margin-bottom:8px}
+.card p{opacity:.7}
+.price{margin-top:18px;font-weight:600;color:var(--acc);font-size:20px}
+@media(max-width:760px){.hero,.menu{grid-template-columns:1fr}nav{display:none}}
+</style>
+</head>
+<body>
+<header><div class="logo">Утро<b>.</b></div><nav><a href="#menu">Меню</a><a href="#">Адрес</a><a href="#">Контакты</a></nav></header>
+<section class="hero">
+<div><h1>Кофе, ради которого <span>встают</span> раньше</h1>
+<p class="lead">Обжариваем зерно сами каждую неделю. Капучино на кокосовом и свежая выпечка с 7:00.</p>
+<a class="btn" href="#menu">Смотреть меню</a></div>
+<div class="cup"></div>
+</section>
+<section class="menu" id="menu">
+<div class="card"><h3>Капучино</h3><p>Двойной эспрессо и шелковое молоко</p><div class="price">220 ₽</div></div>
+<div class="card"><h3>Раф лаванда</h3><p>Сливки, ваниль и лавандовый сироп</p><div class="price">290 ₽</div></div>
+<div class="card"><h3>Круассан</h3><p>Печём каждое утро на сливочном масле</p><div class="price">180 ₽</div></div>
+</section>
+</body>
+</html>
